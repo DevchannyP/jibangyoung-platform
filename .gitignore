@@ -1,20 +1,29 @@
-# Java
+# -----------------------------
+# 📦 Java / Gradle
+# -----------------------------
 *.class
 *.jar
 *.war
 *.log
 target/
-.idea/
+.gradle              # Gradle project-specific cache
+build/               # Gradle build output
 
-# Node
+# -----------------------------
+# ⚙ Node.js / Next.js
+# -----------------------------
 node_modules/
 .next/
-.env*
 dist/
+.env*                # 모든 환경변수 파일 (.env, .env.local 등)
 
-# VSCode
+# -----------------------------
+# 🧠 VSCode
+# -----------------------------
 .vscode/
 
-# OS
-.DS_Store
-Thumbs.db
+# -----------------------------
+# 🖥️ OS 별 시스템 파일
+# -----------------------------
+.DS_Store            # macOS
+Thumbs.db            # Windows

@@ -82,3 +82,13 @@ kapt {
 
 // ✅ QueryDSL - 생성된 소스 경로 포함
 sourceSets["main"].java.srcDir("build/generated/source/kapt/main")
+
+// ✅ Spring Boot 실행 진입점 명시
+tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
+    mainClass.set("com.jibangyoung.AuthApplication")
+}
+
+// ✅ Java 컴파일 인코딩 설정 (한글 주석 깨짐 방지)
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
